@@ -32,6 +32,13 @@ else ifeq ($(TARGET),nexys_video)
   XDC := ${current_dir}/nexys_video.xdc
   DEVICE := xc7a200t_test
   BOARD_BUILDDIR := ${BUILDDIR}/nexys_video
+else ifeq ($(TARGET),ebaz4205)
+  PARTNAME:= xc7z010clg400-1
+  XDC:=${current_dir}/ebaz4205.xdc
+  DEVICE:= xc7z010_test
+  BITSTREAM_DEVICE:= zynq7
+  BOARD_BUILDDIR := ${BUILDDIR}/ebaz4205
+  VERILOG:=${current_dir}/counter_zynq.v
 else
   PARTNAME := xc7a35tcpg236-1
   XDC := ${current_dir}/basys3.xdc
